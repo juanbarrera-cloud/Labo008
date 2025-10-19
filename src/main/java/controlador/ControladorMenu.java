@@ -5,6 +5,7 @@
 package controlador;
 
 import vista.frmMenu;
+import vista.frmCompra;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,7 +23,9 @@ public class ControladorMenu implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vistaMenu.btnComprar) {
-            System.out.println("🟢 Ir a la ventana de Compra de Entradas");
+            frmCompra compra = new frmCompra();
+            ControladorCompra controlador = new ControladorCompra(compra);
+            compra.setVisible(true);
         }
 
         if (e.getSource() == vistaMenu.btnConciertos) {

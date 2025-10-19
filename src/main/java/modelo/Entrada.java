@@ -4,13 +4,13 @@
  */
 package modelo;
 
-class Entrada {
+public class Entrada {
     private int numero;
     private String estado;
-    private Zona zona;     
-    private Venta venta;   
+    private Zona zona;
+    private Object venta; 
 
-    public Entrada(int numero, String estado, Zona zona, Venta venta) {
+    public Entrada(int numero, String estado, Zona zona, Object venta) {
         this.numero = numero;
         this.estado = estado;
         this.zona = zona;

@@ -3,14 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-import java.util.*;
 
-class Zona {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zona {
     private String nombre;
     private int capacidad;
     private int precio;
-    private Concierto concierto;      
-    private List<Entrada> entradas;      
+    private Concierto concierto;
+    private List<Entrada> entradas;
 
     public Zona(String nombre, int capacidad, int precio, Concierto concierto) {
         this.nombre = nombre;
@@ -44,8 +46,8 @@ class Zona {
     public String getNombre() {
         return nombre;
     }
-    
-    public double getPrecio() { 
+
+    public double getPrecio() {
         return precio;
     }
 }
