@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="iblTitulo" min="-2" max="-2" attributes="0"/>
+              <Component id="lblTitulo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
@@ -38,8 +38,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="iblUsuario" min="-2" pref="62" max="-2" attributes="0"/>
-                  <Component id="iblContraseña" min="-2" pref="89" max="-2" attributes="0"/>
+                  <Component id="lblUsuario" min="-2" pref="62" max="-2" attributes="0"/>
+                  <Component id="lblContraseña" min="-2" pref="89" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -54,15 +54,15 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="iblTitulo" min="-2" pref="43" max="-2" attributes="0"/>
+              <Component id="lblTitulo" min="-2" pref="43" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="iblUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="iblContraseña" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblContraseña" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtContraseña" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
@@ -77,9 +77,6 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="txtUsuario">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -103,25 +100,25 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="iblUsuario">
+    <Component class="javax.swing.JLabel" name="lblUsuario">
       <Properties>
         <Property name="text" type="java.lang.String" value="USUARIO:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="iblContrase&#xf1;a">
+    <Component class="javax.swing.JLabel" name="lblContrase&#xf1;a">
       <Properties>
         <Property name="text" type="java.lang.String" value="CONTRASE&#xd1;A:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtContrase&#xf1;a">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtContrase&#xf1;aActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="iblTitulo">
+    <Component class="javax.swing.JLabel" name="lblTitulo">
       <Properties>
         <Property name="text" type="java.lang.String" value="INICIO DE SESION"/>
       </Properties>
