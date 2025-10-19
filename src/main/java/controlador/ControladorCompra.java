@@ -9,14 +9,12 @@ import java.util.*;
 import javax.swing.*;
 import modelo.*;
 import vista.frmCompra;
-import modelo.Concierto;
-import modelo.Zona;
-import modelo.Entrada;
+import vista.frmVenta;
 
 public class ControladorCompra implements ActionListener {
 
     private frmCompra vista;
-    private List<Concierto> conciertos; 
+    private List<Concierto> conciertos;
     private Concierto conciertoSeleccionado;
     private Zona zonaSeleccionada;
     private int total = 0;
@@ -69,6 +67,7 @@ public class ControladorCompra implements ActionListener {
             vista.cmbZona.addItem(z.getNombre());
         }
     }
+
     private void mostrarEntradas(Zona zona) {
         vista.txtEntradas.setText("");
         for (Entrada e : zona.mostrarEntrada()) {
@@ -109,7 +108,7 @@ public class ControladorCompra implements ActionListener {
 
                 total = cantidad * (int) zonaSeleccionada.getPrecio();
                 vista.lblTotal.setText("S/ " + total);
-                JOptionPane.showMessageDialog(vista, "Compra realizada por " + cantidad + " entradas.\nTotal: S/ " + total);
+                abrirFrmVenta(cantidad, total);
 
             } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(vista, "Ingresa una cantidad válida.");
@@ -119,5 +118,17 @@ public class ControladorCompra implements ActionListener {
         if (e.getSource() == vista.btnCancelar) {
             vista.dispose();
         }
+    }
+
+    private void abrirFrmVenta(int cantidad, int total) {
+        Venta venta = new Venta(new Date(), total, new Persona("Juan Carlos"));
+
+        venta.setConcierto(conciertoSeleccionado);
+        venta.setZona(zonaSeleccionada);
+        venta.setCantidad(cantidad);
+
+        frmVenta vistaVenta = new frmVenta();
+        new ControladorVenta(vistaVenta, venta);
+        vistaVenta.setVisible(true);
     }
 }

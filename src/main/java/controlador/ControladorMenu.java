@@ -6,10 +6,12 @@ package controlador;
 
 import vista.frmMenu;
 import vista.frmCompra;
+import vista.frmConcierto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ControladorMenu implements ActionListener {
+
     private frmMenu vistaMenu;
 
     public ControladorMenu(frmMenu vistaMenu) {
@@ -22,6 +24,7 @@ public class ControladorMenu implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if (e.getSource() == vistaMenu.btnComprar) {
             frmCompra compra = new frmCompra();
             ControladorCompra controlador = new ControladorCompra(compra);
@@ -29,12 +32,15 @@ public class ControladorMenu implements ActionListener {
         }
 
         if (e.getSource() == vistaMenu.btnConciertos) {
-            System.out.println("🎵 Mostrar lista de conciertos");
+            frmConcierto vistaConcierto = new frmConcierto();
+            new ControladorConcierto(vistaConcierto, vistaMenu); 
+            vistaConcierto.setVisible(true);
+            vistaMenu.setVisible(false); 
         }
 
         if (e.getSource() == vistaMenu.btnSalir) {
             System.out.println("🔴 Cerrando sesión...");
-            vistaMenu.dispose(); 
+            vistaMenu.dispose();
         }
     }
 }
