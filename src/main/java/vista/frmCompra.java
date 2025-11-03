@@ -4,17 +4,18 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author LENOVO
  */
 public class frmCompra extends javax.swing.JFrame {
 
-    /**
-     * Creates new form frmCompra
-     */
     public frmCompra() {
         initComponents();
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**
@@ -43,8 +44,15 @@ public class frmCompra extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblCompra.setBackground(new java.awt.Color(0, 0, 0));
+        lblCompra.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblCompra.setForeground(new java.awt.Color(255, 255, 51));
         lblCompra.setText("COMPRA DE ENTRADAS");
+        lblCompra.setOpaque(true);
 
+        cmbConcierto.setBackground(new java.awt.Color(0, 0, 0));
+        cmbConcierto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cmbConcierto.setForeground(new java.awt.Color(255, 255, 255));
         cmbConcierto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cmbConcierto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,28 +60,56 @@ public class frmCompra extends javax.swing.JFrame {
             }
         });
 
+        cmbZona.setBackground(new java.awt.Color(0, 0, 0));
+        cmbZona.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        cmbZona.setForeground(new java.awt.Color(255, 255, 255));
         cmbZona.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        lblConcierto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblConcierto.setForeground(new java.awt.Color(255, 255, 255));
         lblConcierto.setText("Concierto: ");
 
+        lblZona.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblZona.setForeground(new java.awt.Color(255, 255, 255));
         lblZona.setText("Zona:");
 
+        lblEntradas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblEntradas.setForeground(new java.awt.Color(255, 255, 255));
         lblEntradas.setText("ENTRADAS DISPONIBLES:");
 
+        jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
+
+        txtEntradas.setBackground(new java.awt.Color(255, 255, 255));
         txtEntradas.setColumns(20);
+        txtEntradas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtEntradas.setForeground(new java.awt.Color(0, 0, 0));
         txtEntradas.setRows(5);
         jScrollPane1.setViewportView(txtEntradas);
 
+        lblCantidad.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblCantidad.setForeground(new java.awt.Color(255, 255, 255));
         lblCantidad.setText("Cantidad:");
 
+        txtCantidad.setBackground(new java.awt.Color(255, 255, 255));
+        txtCantidad.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtCantidad.setForeground(new java.awt.Color(0, 0, 0));
         txtCantidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCantidadActionPerformed(evt);
             }
         });
 
+        lblTotal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblTotal.setForeground(new java.awt.Color(255, 255, 255));
         lblTotal.setText("Total a pagar: ");
 
+        lblTotalpagar.setBackground(new java.awt.Color(0, 0, 0));
+        lblTotalpagar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblTotalpagar.setForeground(new java.awt.Color(255, 255, 255));
+
+        btnComprar.setBackground(new java.awt.Color(0, 0, 0));
+        btnComprar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnComprar.setForeground(new java.awt.Color(255, 255, 255));
         btnComprar.setText("COMPRAR");
         btnComprar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +117,9 @@ public class frmCompra extends javax.swing.JFrame {
             }
         });
 
+        btnCancelar.setBackground(new java.awt.Color(0, 0, 0));
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
         btnCancelar.setText("SALIR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -88,12 +127,9 @@ public class frmCompra extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(lblCompra))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,24 +138,26 @@ public class frmCompra extends javax.swing.JFrame {
                                 .addGap(30, 30, 30)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cmbZona, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cmbConcierto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(cmbConcierto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblCompra)))
                             .addComponent(lblEntradas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(lblTotal)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(lblTotalpagar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(lblCantidad)
-                                    .addGap(45, 45, 45)
-                                    .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(btnComprar)
-                                .addGap(82, 82, 82)
-                                .addComponent(btnCancelar)))))
-                .addContainerGap(95, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(lblTotal)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(lblTotalpagar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(lblCantidad)
+                                        .addGap(45, 45, 45)
+                                        .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 252, Short.MAX_VALUE)
+                        .addComponent(btnCancelar)
+                        .addGap(84, 84, 84))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +188,7 @@ public class frmCompra extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnComprar)
                     .addComponent(btnCancelar))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

@@ -27,9 +27,9 @@ public class Entrada {
 
     public boolean vender() {
         if (estado.equals("disponible")) {
-            estado = "vendida";
-            return true;
-        }
+        estado = "vendida";
+        return true;
+        }   
         return false;
     }
 

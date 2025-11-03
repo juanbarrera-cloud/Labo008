@@ -4,8 +4,26 @@
  */
 package datos;
 
+import java.util.ArrayList;
+import modelo.Persona;
+import modelo.Tarjeta;
+
 public class Repositorio {
 
-    private static Usuario usuario = new Usuario("juancarlos", "24200009");
+    public static ArrayList<Persona> listaPersonas = new ArrayList<>();
 
+    static {
+        listaPersonas.add(new Persona(
+            "Juan", "Barrera", "24200009", "juancarlos", "1234",
+            new Tarjeta("113345448", "1")
+        ));
+        listaPersonas.add(new Persona(
+            "María", "López", "55667788", "maria", "abcd",
+            new Tarjeta("555666788", "4")
+        ));
+    }
+
+    public static ArrayList<Persona> obtenerPersonas() {
+        return listaPersonas;
+    }
 }

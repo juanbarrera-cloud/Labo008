@@ -7,13 +7,13 @@
  *
  * @author LENOVO
  */
-import controlador.ControladorLogin;
-import vista.frmLogin;
+import controlador.ControladorInicio;
+import vista.frmInicio;
 
 public class App {
     public static void main(String[] args) {
-        frmLogin vista = new frmLogin();             
-        ControladorLogin controlador = new ControladorLogin(vista); 
-        vista.setVisible(true);                       
+        frmInicio vistaInicio = new frmInicio();          
+        ControladorInicio controlador = new ControladorInicio(vistaInicio);
+        vistaInicio.setVisible(true);                        
     }
 }

@@ -39,8 +39,10 @@ public class ControladorMenu implements ActionListener {
         }
 
         if (e.getSource() == vistaMenu.btnSalir) {
-            System.out.println("🔴 Cerrando sesión...");
             vistaMenu.dispose();
+            vista.frmLogin login = new vista.frmLogin("comprador");
+            controlador.ControladorLogin ctrlLogin = new controlador.ControladorLogin(login);
+            login.setVisible(true);
         }
     }
 }

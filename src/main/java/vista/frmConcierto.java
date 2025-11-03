@@ -4,17 +4,18 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author LENOVO
  */
 public class frmConcierto extends javax.swing.JFrame {
 
-    /**
-     * Creates new form frmConciertos
-     */
     public frmConcierto() {
         initComponents();
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.BLACK);
     }
 
     /**
@@ -33,10 +34,16 @@ public class frmConcierto extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblConciertos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblConciertos.setForeground(new java.awt.Color(204, 255, 0));
         lblConciertos.setText("CONCIERTOS DISPONIBLES");
 
+        lblAgua.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblAgua.setForeground(new java.awt.Color(255, 255, 255));
         lblAgua.setText("AGUA MARINA");
 
+        lblGrupo5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblGrupo5.setForeground(new java.awt.Color(255, 255, 255));
         lblGrupo5.setText("GRUPO 5");
 
         btnVolver.setText("VOLVER");
@@ -53,30 +60,31 @@ public class frmConcierto extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblAgua)
-                            .addComponent(lblGrupo5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
+                        .addGap(164, 164, 164)
                         .addComponent(btnVolver))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(lblConciertos, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblGrupo5, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblAgua))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 94, Short.MAX_VALUE)
+                .addComponent(lblConciertos)
+                .addGap(73, 73, 73))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(79, 79, 79)
+                .addContainerGap(59, Short.MAX_VALUE)
                 .addComponent(lblConciertos)
-                .addGap(37, 37, 37)
-                .addComponent(lblAgua)
-                .addGap(31, 31, 31)
+                .addGap(44, 44, 44)
                 .addComponent(lblGrupo5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(lblAgua)
+                .addGap(33, 33, 33)
                 .addComponent(btnVolver)
-                .addGap(53, 53, 53))
+                .addGap(38, 38, 38))
         );
 
         pack();

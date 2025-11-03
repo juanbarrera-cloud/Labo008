@@ -5,40 +5,44 @@
 package modelo;
 
 public class Persona {
-    private String nombres;
-    private String apellidos;
+    private String nombre;
+    private String apellido;
     private String dni;
+    private String usuario;
     private String contraseña;
     private Tarjeta tarjeta;
-    private Venta venta;
-
-    public Persona() {}
-
-    public Persona(String nombreCompleto) {
-        this.nombres = nombreCompleto;
+    
+    public Persona(String nombre) {
+        this.nombre = nombre;
     }
 
-    public Persona(String nombres, String apellidos, String dni, String contraseña) {
-        this.nombres = nombres;
-        this.apellidos = apellidos;
+    public Persona(String nombre, String apellido, String dni, String usuario, String contraseña, Tarjeta tarjeta) {
+        this.nombre = nombre;
+        this.apellido = apellido;
         this.dni = dni;
+        this.usuario = usuario;
         this.contraseña = contraseña;
+        this.tarjeta = tarjeta;
     }
 
-    public String getNombres() {
-        return nombres;
+    public Persona() {
     }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
+    // Getters y Setters
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getDni() {
@@ -47,6 +51,14 @@ public class Persona {
 
     public void setDni(String dni) {
         this.dni = dni;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getContraseña() {
@@ -65,46 +77,8 @@ public class Persona {
         this.tarjeta = tarjeta;
     }
 
-    public Venta getVenta() {
-        return venta;
-    }
-
-    public void setVenta(Venta venta) {
-        this.venta = venta;
-    }
-
-    public String getNombre() {
-        return nombres;
-    }
-
-    public boolean registrarTarjeta(Tarjeta t) {
-        if (this.tarjeta == null) {
-            this.tarjeta = t;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean eliminarTarjeta() {
-        if (this.tarjeta != null) {
-            this.tarjeta = null;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean anularVenta() {
-        if (this.venta != null) {
-            return this.venta.anular();
-        }
-        return false;
-    }
-
-    public boolean comprar(Venta v) {
-        if (this.venta == null) {
-            this.venta = v;
-            return true;
-        }
-        return false;
+    @Override
+    public String toString() {
+        return nombre + " " + apellido + " - DNI: " + dni;
     }
 }
